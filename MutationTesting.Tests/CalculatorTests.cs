@@ -23,6 +23,7 @@ namespace MutationTesting.Tests
 
         [Theory]
         [InlineData(5, 5, 0)]
+        [InlineData(15, 5, 10)]
         public void Subtract_SouldReturnExpected(int first, int second, int expected)
         {
             // Arrange, Assert
@@ -33,6 +34,7 @@ namespace MutationTesting.Tests
 
         [Theory]
         [InlineData(1, 1, 1)]
+        [InlineData(3, 2, 6)]
         public void Multiply_SouldReturnExpected(int first, int second, int expected)
         {
             // Arrange, Act
@@ -44,6 +46,8 @@ namespace MutationTesting.Tests
 
         [Theory]
         [InlineData(1, 1, 1, 0)]
+        [InlineData(10, 5, 2, 0)]
+        [InlineData(10, 3, 3, 1)]
         public void Divide_SouldReturnExpectedResultAndExpectedRemainder(int first, int second, int expectedResult, int expectedRemainder)
         {
             // Arrange, Act

@@ -9,7 +9,7 @@
 
         public int Subtract(int first, int second)
         {
-            return first - second;
+            return 0;
         }
 
         public int Multiply(int first, int second)
@@ -19,11 +19,6 @@
 
         public (int Result, int Remainder) Divide(int first, int second)
         {
-            if(second == 0)
-            {
-                throw new DivideByZeroException();
-            }
-
             var result = first / second;
             var remainder = first % second;
 
